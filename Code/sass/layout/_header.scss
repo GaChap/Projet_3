@@ -1,0 +1,16 @@
+.header
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4%;
+    margin-bottom: 1%;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.18);
+    &__logo
+    {
+        @media (max-width: 320px)
+        {
+            width: 50%;
+            padding-top: 8%;
+        }
+    }
+}
