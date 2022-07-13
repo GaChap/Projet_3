@@ -6,7 +6,20 @@
     font-style: normal;
 }
 
+@font-face
+{
+    font-family: 'Shrikhand';
+    src: url('/public/Police/Shrikhand/Shrikhand-Regular.ttf') format('trueType');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body
 {
     font-family: 'Roboto', sans-serif;
+}
+
+footer > p
+{
+    font-family: 'Shrikhand', sans-serif;
 }
