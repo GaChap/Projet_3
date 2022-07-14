@@ -1,0 +1,165 @@
+.header__lien
+{
+    position: absolute;
+    left: 5%;
+    top: 3.5%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #353535;
+}
+
+.restaurant
+{
+
+    &__img
+    {
+        width: 100%;
+        margin-top: -1%;
+        height: 250px;
+    }
+
+    &__cadre
+    {
+        z-index: 1;
+    }
+    
+    
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    background-color: #F6F6F6;
+    height: 1175px;
+    margin-top: -14%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    &__titre
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__text
+        {
+            font-size: 25px;
+            padding-left: 5%;
+        }
+
+        &__icone
+        {
+            font-size: 20px;
+            position: relative;
+            right: 10%;
+            top: 0%;
+        }
+    }
+
+    &__entrees
+    {
+        &__titre
+        {
+            @include menu__titres;
+        }
+
+        &__inter
+        {
+            margin-left: 6%;
+            margin-top: -4%;
+            width: 15%;
+            height: 3px;
+            background-color: $couleur_tertiaire;
+        }
+
+        
+    }
+
+    &__liste
+    {
+        @include menu__liste;
+
+        &__carte
+        {
+            @include menu__cartes;
+
+            &--gras
+            {
+                @include menu__cartes__gras;
+            }
+
+            &__text
+            {
+                @include menu__cartes__text
+            }
+
+            &__prix
+            {
+                @include menu__cartes__prix;
+            }
+        }
+    }
+
+    &__plats
+    {
+        &__titre
+        {
+            @include menu__titres;
+        }
+
+        &__inter
+        {
+            margin-left: 6%;
+            margin-top: -4%;
+            width: 13%;
+            height: 3px;
+            background-color: $couleur_tertiaire; 
+        }
+    }
+
+    &__desserts
+    {
+        &__titre
+        {
+            @include menu__titres;
+        }
+
+        &__inter
+        {
+            margin-left: 6%;
+            margin-top: -4%;
+            width: 14%;
+            height: 3px;
+            background-color: $couleur_tertiaire; 
+        }
+    }
+
+    &__btn
+    {
+        margin-top: 15%;
+        width: 60%;
+        margin-left: 20%;
+        padding-top: 5%;
+    }
+
+    &__bouton
+    {
+        padding: 0%;
+        border-color: transparent;
+        width: 98%;
+        background-color: transparent;
+        text-align: left;
+        &:active
+        {
+            background-color: lightgreen;
+        }
+
+        &:focus
+        {
+            background-color: lightseagreen;
+        }
+    }
+}

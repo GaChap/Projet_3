@@ -1,0 +1,28 @@
+.footer
+{
+    @media (max-width:320px)
+    {
+
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        color: white;
+        padding-left: 9%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        justify-content: space-between;
+        height: 174px;
+
+        &--lien
+        {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        & > i
+        {
+            padding-right: 1%;
+        }
+    }
+}
