@@ -1,16 +1,18 @@
 .location
 {
-    @media (max-width:320px)
-    {
         background-color: #EAEAEA;
         display: flex;
         justify-content: center;
         color: #353535;
+    
+    @media (min-width:426px) and (max-width:1440px)
+    {
+        margin-top: -1%;
     }
 
     &__icone
     {
-        @media (max-width: 320px)
+        @media (max-width: 1440px)
         {
             padding-right: 10px;
         }
@@ -19,7 +21,7 @@
 
 .explorestau
 {
-    @media (max-width:320px)
+    @media (max-width:1440px)
     {
         height: 285px;
         display: flex;
@@ -30,12 +32,21 @@
         color: #353535
     }
 
+    @media (min-width:426px) and (max-width:1440px)
+    {
+        height: 255px;
+    }
+
     &--gras
     {
         padding-top: 5%;
         margin-bottom: 0%;
         font-size: 25px;
         font-weight: bold;
+        @media (min-width:426px) and (max-width:1440px)
+        {
+            padding-top: 1%;
+        }
     }
 
     &__btn
@@ -47,10 +58,6 @@
 
 .fonction
 {
-    @media (max-width:320px)
-    {
-
-    }
 
     &__liste
     {
@@ -135,6 +142,11 @@
         padding-top: 15%;
         font-size: 20px;
         font-weight: bold;
+        @media (min-width:426px) and (max-width:768px)
+        {
+            padding-left: 15%;
+            padding-top: 10%;
+        }
     }
 
     &__liste
@@ -142,6 +154,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (min-width:769px) and (max-width:1440px)
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     &__carte
@@ -150,6 +167,15 @@
         width: 90%;
         display: flex;
         flex-direction: column;
+        @media (min-width:426px) and (max-width:768px)
+        {
+            width: 70%;
+        }
+        @media (min-width:769px) and (max-width:1440px)
+        {
+            width: 40%;
+            margin-left: 5%;
+        }
 
         &__img
         {

@@ -6,6 +6,23 @@
     font-size: 20px;
     text-decoration: none;
     color: #353535;
+    @media (min-width:321px) and (max-width:375px)
+    {
+        top: 4.5%;
+    }
+    @media (min-width:376px) and (max-width:425px)
+    {
+        top: 5%;
+    }
+    @media (min-width:426px) and (max-width:768px)
+    {
+        font-size: 45px;
+        top: 8.5%;
+    }
+    @media (min-width:768px) and (max-width:1024px)
+    {
+
+    }
 }
 
 .restaurant
@@ -16,6 +33,14 @@
         width: 100%;
         margin-top: -1%;
         height: 250px;
+        @media (min-width:426px) and (max-width: 768px)
+        {
+            height: 420px;
+        }
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            height: 480px;
+        }
     }
 
     &__cadre
@@ -37,6 +62,35 @@
     margin-top: -14%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    @media (min-width:321px) and (max-width:375px)
+    {
+        height: 1240px;
+    }
+    @media (min-width:376px) and (max-width:425px)
+    {
+        height: 1300px;
+    }
+    @media (min-width:426px) and (max-width: 768px)
+    {
+        height: 1350px;
+    }
+
+    &__enchantee
+    {
+        height: 1290px;
+        @media (min-width:321px) and (max-width:375px)
+        {
+            height: 1330px;
+        }
+        @media (min-width:376px) and (max-width:425px)
+        {
+            height: 1380px;
+        }
+        @media(min-width: 426px) and (max-width:768px)
+        {
+            height: 1470px;
+        }
+    }
 
     &__titre
     {
@@ -55,7 +109,7 @@
             font-size: 20px;
             position: relative;
             right: 10%;
-            top: 0%;
+            top: 35%;
         }
     }
 
@@ -73,6 +127,11 @@
             width: 15%;
             height: 3px;
             background-color: $couleur_tertiaire;
+            @media (min-width:426px) and (max-width:768px)
+            {
+                margin-top: -1.5%;
+                width: 7%;
+            }
         }
 
         
@@ -101,6 +160,14 @@
                 @include menu__cartes__prix;
             }
         }
+
+        &__note
+        {
+            @media (min-width:426px) and (max-width:768px)
+            {
+                height: 400px;
+            }
+        }
     }
 
     &__plats
@@ -116,7 +183,12 @@
             margin-top: -4%;
             width: 13%;
             height: 3px;
-            background-color: $couleur_tertiaire; 
+            background-color: $couleur_tertiaire;
+            @media (min-width:426px) and (max-width:768px)
+            {
+                margin-top: -1.5%;
+                width: 5%;
+            }
         }
     }
 
@@ -133,7 +205,12 @@
             margin-top: -4%;
             width: 14%;
             height: 3px;
-            background-color: $couleur_tertiaire; 
+            background-color: $couleur_tertiaire;
+            @media (min-width:426px) and (max-width:768px)
+            {
+                margin-top: -1.5%;
+                width: 6%;
+            }
         }
     }
 
@@ -143,6 +220,14 @@
         width: 60%;
         margin-left: 20%;
         padding-top: 5%;
+        @media (min-width:426px) and (max-width:768px)
+        {
+            padding-bottom: 1%;
+            margin-top: 9%;
+            width: 25%;
+            margin-left: 36%;
+            padding-top: 1%;
+        }
     }
 
     &__bouton

@@ -1,8 +1,7 @@
 .footer
 {
-    @media (max-width:320px)
+    @media (max-width:1440px)
     {
-
         display: flex;
         flex-direction: column;
         background-color: #353535;
@@ -12,6 +11,12 @@
         padding-bottom: 10%;
         justify-content: space-between;
         height: 174px;
+        @media (min-width:426px) and (max-width:1440px)
+        {
+            align-items: center;
+            padding-left: 0%;
+            padding-bottom: 5%;
+        }
 
         &--lien
         {
