@@ -1,6 +1,6 @@
 .footer
 {
-    @media (max-width:1440px)
+    @media (max-width:1920px)
     {
         display: flex;
         flex-direction: column;
@@ -11,7 +11,7 @@
         padding-bottom: 10%;
         justify-content: space-between;
         height: 174px;
-        @media (min-width:426px) and (max-width:1440px)
+        @media (min-width:426px) and (max-width:1920px)
         {
             align-items: center;
             padding-left: 0%;

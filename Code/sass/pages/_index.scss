@@ -5,14 +5,14 @@
         justify-content: center;
         color: #353535;
     
-    @media (min-width:426px) and (max-width:1440px)
+    @media (min-width:426px) and (max-width:1920px)
     {
         margin-top: -1%;
     }
 
     &__icone
     {
-        @media (max-width: 1440px)
+        @media (max-width: 1920px)
         {
             padding-right: 10px;
         }
@@ -21,7 +21,7 @@
 
 .explorestau
 {
-    @media (max-width:1440px)
+    @media (max-width:1920px)
     {
         height: 285px;
         display: flex;
@@ -32,7 +32,7 @@
         color: #353535
     }
 
-    @media (min-width:426px) and (max-width:1440px)
+    @media (min-width:426px) and (max-width:1920px)
     {
         height: 255px;
     }
@@ -43,7 +43,7 @@
         margin-bottom: 0%;
         font-size: 25px;
         font-weight: bold;
-        @media (min-width:426px) and (max-width:1440px)
+        @media (min-width:426px) and (max-width:1920px)
         {
             padding-top: 1%;
         }
@@ -56,23 +56,52 @@
     }
 }
 
+
+
 .fonction
 {
 
     &__liste
     {
+        padding-left: 7%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        height: 260px;
+        align-items: center;/**/
+        height: 215px;
+        width: 88%;/**/
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            height: 225px; 
+        }
     }
+
+    
 
     &__carte
     {
         &__icone
         {
             padding-right: 8%;
+            margin-top: 4%;
+            margin-left: -20%;
+            color: #353535;
+            @media (min-width:321px) and (max-width:425px)
+            {
+                margin-left: -15%;
+            }
+            /*@media (min-width:426px) and (max-width:768px)
+            {
+                margin-left: -19%;
+            }*/
+            @media (min-width:769px) and (max-width:1024px)
+            {
+                margin-left: -25%;
+            }
+            @media (min-width:1025px) and (max-width:1920px)
+            {
+                margin-left: -22%;
+            }
         }
 
         &__numero--1
@@ -110,12 +139,32 @@
 
         padding-top: 3%;
         padding-left: 10%;
-        padding-bottom: 3%;
+        padding-bottom: 0%;
         border-radius: 18px;
-        width: 80%;
+        width: 84%;
         background-color: #F6F6F6;
         font-weight: bold;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        @media (min-width:376px) and (max-width:425px)
+        {
+            width: 64%;
+        }
+        @media (min-width:426px) and (max-width:768px)
+        {
+            width: 40%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            width: 34%;
+            padding-top: 1%;
+        }
+        @media (min-width:1025px) and (max-width:1920px)
+        {
+            width: 25%;
+            padding-top: 1%;
+        }
     }
 
     &--gras
@@ -124,8 +173,58 @@
         font-weight: bold;
         margin-top: 15%;
         padding-left: 5%;
+        @media (min-width:426px) and (max-width:768px)
+        {
+            padding-left: 15%;
+        }
     }
 }
+
+ul
+{
+    list-style-type: none; 
+}
+li
+{
+    counter-increment: list;
+
+}
+li::before
+{
+    content: counter(list);
+    /*border: 2px solid red;*/
+    border-radius: 50%;
+    margin-right: 0.5rem; 
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    top: 2%;
+    left: -19%;
+    background-color: $couleur_primaire;
+    color: white;
+    @media (min-width:321px) and (max-width:375px)
+    {
+        left: -16%;
+    }
+    @media (min-width:376px) and (max-width:425px)
+    {
+        left: -20%;
+    }
+    @media (min-width:426px) and (max-width:768px)
+    {
+        left: -30%;
+        top: 7%;
+    }
+    @media (min-width:769px) and (max-width:1024px)
+    {
+        left: -33%;
+    }
+    @media(min-width: 1025px) and (max-width:1920px)
+    {
+        left: -43%;
+        top: -3%;
+    }
+}
+
 
 .restaurants
 {
@@ -154,7 +253,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media (min-width:769px) and (max-width:1440px)
+        @media (min-width:769px) and (max-width:1920px)
         {
             flex-direction: row;
             flex-wrap: wrap;
@@ -171,10 +270,15 @@
         {
             width: 70%;
         }
-        @media (min-width:769px) and (max-width:1440px)
+        @media (min-width:769px) and (max-width:1024px)
         {
             width: 40%;
             margin-left: 5%;
+        }
+        @media (min-width:1025px) and (max-width:1920px)
+        {
+            width: 30%;
+            margin-left: 12%;
         }
 
         &__img
@@ -182,6 +286,14 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             width: 100%;
+            @media (max-width:425px)
+            {
+                height: 200px;
+            }
+            @media (min-width:426px) and (max-width:1920px)
+            {
+                height: 295px;
+            }
         }
         
         &__aside

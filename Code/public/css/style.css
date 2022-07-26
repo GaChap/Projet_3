@@ -18,7 +18,7 @@ footer > p {
   font-family: "Shrikhand", sans-serif;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .btn {
     padding-left: 2%;
     padding-top: 8%;
@@ -29,6 +29,15 @@ footer > p {
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
     color: white;
     border-color: #F6F6F6;
+    position: relative;
+    z-index: 1;
+    transition: opacity 250ms;
+    transition: box-shadow 300ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -39,7 +48,7 @@ footer > p {
   margin-bottom: 1%;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.18);
 }
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1920px) {
   .header {
     padding-bottom: 2%;
   }
@@ -50,7 +59,7 @@ footer > p {
     padding-top: 8%;
   }
 }
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1920px) {
   .header__logo {
     padding-top: 2%;
   }
@@ -62,18 +71,18 @@ footer > p {
   justify-content: center;
   color: #353535;
 }
-@media (min-width: 426px) and (max-width: 1440px) {
+@media (min-width: 426px) and (max-width: 1920px) {
   .location {
     margin-top: -1%;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .location__icone {
     padding-right: 10px;
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .explorestau {
     height: 285px;
     display: flex;
@@ -84,7 +93,7 @@ footer > p {
     color: #353535;
   }
 }
-@media (min-width: 426px) and (max-width: 1440px) {
+@media (min-width: 426px) and (max-width: 1920px) {
   .explorestau {
     height: 255px;
   }
@@ -95,7 +104,7 @@ footer > p {
   font-size: 25px;
   font-weight: bold;
 }
-@media (min-width: 426px) and (max-width: 1440px) {
+@media (min-width: 426px) and (max-width: 1920px) {
   .explorestau--gras {
     padding-top: 1%;
   }
@@ -106,24 +115,53 @@ footer > p {
 }
 
 .fonction__liste {
+  padding-left: 7%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  height: 260px;
+  align-items: center; /**/
+  height: 215px;
+  width: 88%; /**/
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fonction__liste {
+    height: 225px;
+  }
 }
 .fonction__carte {
   padding-top: 3%;
   padding-left: 10%;
-  padding-bottom: 3%;
+  padding-bottom: 0%;
   border-radius: 18px;
-  width: 80%;
+  width: 84%;
   background-color: #F6F6F6;
   font-weight: bold;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .fonction__carte__icone {
   padding-right: 8%;
+  margin-top: 4%;
+  margin-left: -20%;
+  color: #353535;
+  /*@media (min-width:426px) and (max-width:768px)
+  {
+      margin-left: -19%;
+  }*/
+}
+@media (min-width: 321px) and (max-width: 425px) {
+  .fonction__carte__icone {
+    margin-left: -15%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fonction__carte__icone {
+    margin-left: -25%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .fonction__carte__icone {
+    margin-left: -22%;
+  }
 }
 .fonction__carte__numero--1 {
   position: absolute;
@@ -152,11 +190,88 @@ footer > p {
   left: 2.5%;
   top: 86.7%;
 }
+@media (min-width: 376px) and (max-width: 425px) {
+  .fonction__carte {
+    width: 64%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .fonction__carte {
+    width: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fonction__carte {
+    width: 34%;
+    padding-top: 1%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .fonction__carte {
+    width: 25%;
+    padding-top: 1%;
+  }
+}
 .fonction--gras {
   font-size: 25px;
   font-weight: bold;
   margin-top: 15%;
   padding-left: 5%;
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .fonction--gras {
+    padding-left: 15%;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  counter-increment: list;
+}
+
+li::before {
+  content: counter(list);
+  /*border: 2px solid red;*/
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  top: 2%;
+  left: -19%;
+  background-color: #9356DC;
+  color: white;
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  li::before {
+    left: -16%;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  li::before {
+    left: -20%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  li::before {
+    left: -30%;
+    top: 7%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  li::before {
+    left: -33%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  li::before {
+    left: -43%;
+    top: -3%;
+  }
 }
 
 @media (max-width: 320px) {
@@ -183,7 +298,7 @@ footer > p {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1920px) {
   .restaurants__liste {
     flex-direction: row;
     flex-wrap: wrap;
@@ -200,16 +315,32 @@ footer > p {
     width: 70%;
   }
 }
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .restaurants__carte {
     width: 40%;
     margin-left: 5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .restaurants__carte {
+    width: 30%;
+    margin-left: 12%;
   }
 }
 .restaurants__carte__img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
+}
+@media (max-width: 425px) {
+  .restaurants__carte__img {
+    height: 200px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1920px) {
+  .restaurants__carte__img {
+    height: 295px;
+  }
 }
 .restaurants__carte__aside {
   margin-top: -1%;
@@ -263,6 +394,19 @@ footer > p {
     top: 8.5%;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__lien {
+    font-size: 45px;
+    top: 4.5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .header__lien {
+    font-size: 45px;
+    top: 5.5%;
+  }
+}
+
 .restaurant__img {
   width: 100%;
   margin-top: -1%;
@@ -275,7 +419,12 @@ footer > p {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .restaurant__img {
-    height: 480px;
+    height: 500px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .restaurant__img {
+    height: 670px;
   }
 }
 .restaurant__cadre {
@@ -308,6 +457,36 @@ footer > p {
     height: 1350px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    height: 1660px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1579px) {
+  .menu {
+    height: 2100px;
+  }
+}
+@media (min-width: 1580px) and (max-width: 1660px) {
+  .menu {
+    height: 2160px;
+  }
+}
+@media (min-width: 1661px) and (max-width: 1775px) {
+  .menu {
+    height: 2235px;
+  }
+}
+@media (min-width: 1776px) and (max-width: 1865px) {
+  .menu {
+    height: 2300px;
+  }
+}
+@media (min-width: 1866px) {
+  .menu {
+    height: 2360px;
+  }
+}
 .menu__enchantee {
   height: 1290px;
 }
@@ -324,6 +503,16 @@ footer > p {
 @media (min-width: 426px) and (max-width: 768px) {
   .menu__enchantee {
     height: 1470px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__enchantee {
+    height: 1760px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__enchantee {
+    height: 2170px;
   }
 }
 .menu__titre {
@@ -351,6 +540,16 @@ footer > p {
     margin-top: 7%;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__entrees__titre {
+    margin-top: 11%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__entrees__titre {
+    margin-top: 9%;
+  }
+}
 .menu__entrees__inter {
   margin-left: 6%;
   margin-top: -4%;
@@ -364,13 +563,25 @@ footer > p {
     width: 7%;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__entrees__inter {
+    margin-top: -1%;
+    width: 4.5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__entrees__inter {
+    margin-top: -0.8%;
+    width: 4%;
+  }
+}
 .menu__liste {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1024px) {
   .menu__liste {
     height: 287px;
   }
@@ -399,6 +610,11 @@ footer > p {
     width: 80%;
   }
 }
+@media (min-width: 769px) and (max-width: 1920px) {
+  .menu__liste__carte {
+    width: 80%;
+  }
+}
 .menu__liste__carte--gras {
   font-weight: bold;
   margin-top: 0%;
@@ -411,6 +627,18 @@ footer > p {
     padding-top: 2%;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__liste__carte--gras {
+    padding-top: 1%;
+    margin-bottom: -1%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__liste__carte--gras {
+    padding-top: 1%;
+    margin-bottom: -0.8%;
+  }
+}
 .menu__liste__carte__text {
   font-size: 14px;
   margin-bottom: -8%;
@@ -418,6 +646,11 @@ footer > p {
 @media (min-width: 426px) and (max-width: 768px) {
   .menu__liste__carte__text {
     margin-bottom: -3%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1920px) {
+  .menu__liste__carte__text {
+    margin-bottom: -2%;
   }
 }
 .menu__liste__carte__prix {
@@ -432,6 +665,11 @@ footer > p {
     height: 400px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__liste__note {
+    height: 400px;
+  }
+}
 .menu__plats__titre {
   margin-top: 15%;
   padding-left: 6%;
@@ -440,6 +678,16 @@ footer > p {
 @media (min-width: 426px) and (max-width: 768px) {
   .menu__plats__titre {
     margin-top: 7%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__plats__titre {
+    margin-top: 11%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__plats__titre {
+    margin-top: 9%;
   }
 }
 .menu__plats__inter {
@@ -455,6 +703,18 @@ footer > p {
     width: 5%;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__plats__inter {
+    margin-top: -1%;
+    width: 4%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__plats__inter {
+    margin-top: -1%;
+    width: 2.8%;
+  }
+}
 .menu__desserts__titre {
   margin-top: 15%;
   padding-left: 6%;
@@ -463,6 +723,16 @@ footer > p {
 @media (min-width: 426px) and (max-width: 768px) {
   .menu__desserts__titre {
     margin-top: 7%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__desserts__titre {
+    margin-top: 11%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__desserts__titre {
+    margin-top: 9%;
   }
 }
 .menu__desserts__inter {
@@ -476,6 +746,18 @@ footer > p {
   .menu__desserts__inter {
     margin-top: -1.5%;
     width: 6%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__desserts__inter {
+    margin-top: -1%;
+    width: 4.5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__desserts__inter {
+    margin-top: -1%;
+    width: 3%;
   }
 }
 .menu__btn {
@@ -493,6 +775,23 @@ footer > p {
     padding-top: 1%;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__btn {
+    width: 25%;
+    margin-left: 36%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .menu__btn {
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 36%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+  }
+}
 .menu__bouton {
   padding: 0%;
   border-color: transparent;
@@ -507,7 +806,7 @@ footer > p {
   background-color: lightseagreen;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -520,20 +819,20 @@ footer > p {
     height: 174px;
   }
 }
-@media (max-width: 1440px) and (min-width: 426px) and (max-width: 1440px) {
+@media (max-width: 1920px) and (min-width: 426px) and (max-width: 1920px) {
   .footer {
     align-items: center;
     padding-left: 0%;
     padding-bottom: 5%;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .footer--lien {
     text-decoration: none;
     color: white;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .footer > i {
     padding-right: 1%;
   }

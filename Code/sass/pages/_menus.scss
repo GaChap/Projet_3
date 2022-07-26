@@ -21,7 +21,13 @@
     }
     @media (min-width:768px) and (max-width:1024px)
     {
-
+        font-size: 45px;
+        top: 4.5%;
+    }
+    @media (min-width:1025px) and (max-width:1920px)
+    {
+        font-size: 45px;
+        top: 5.5%;
     }
 }
 
@@ -39,7 +45,11 @@
         }
         @media (min-width:769px) and (max-width:1024px)
         {
-            height: 480px;
+            height: 500px;
+        }
+        @media (min-width:1025px) and (max-width:1920px)
+        {
+            height: 670px;
         }
     }
 
@@ -74,6 +84,30 @@
     {
         height: 1350px;
     }
+    @media (min-width:769px) and (max-width:1024px)
+    {
+        height: 1660px;
+    }
+    @media (min-width:1025px) and (max-width:1579px)
+    {
+        height: 2100px;
+    }
+    @media (min-width:1580px) and (max-width:1660px)
+    {
+        height: 2160px;
+    }
+    @media (min-width:1661px) and (max-width:1775px)
+    {
+        height: 2235px;
+    }
+    @media (min-width:1776px) and (max-width:1865px)
+    {
+        height: 2300px;
+    }
+    @media (min-width:1866px)
+    {
+        height: 2360px;
+    }
 
     &__enchantee
     {
@@ -89,6 +123,14 @@
         @media(min-width: 426px) and (max-width:768px)
         {
             height: 1470px;
+        }
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            height: 1760px;
+        }
+        @media (min-width:1025px) and (max-width:1920px)
+        {
+            height: 2170px;
         }
     }
 
@@ -132,6 +174,16 @@
                 margin-top: -1.5%;
                 width: 7%;
             }
+            @media (min-width:769px) and (max-width:1024px)
+            {
+                margin-top: -1%;
+                width: 4.5%;
+            }
+            @media (min-width:1025px) and (max-width:1920px)
+            {
+                margin-top: -0.8%;
+                width: 4%;
+            }
         }
 
         
@@ -167,6 +219,10 @@
             {
                 height: 400px;
             }
+            @media (min-width:769px) and (max-width:1024px)
+            {
+                height: 400px;
+            }
         }
     }
 
@@ -188,6 +244,16 @@
             {
                 margin-top: -1.5%;
                 width: 5%;
+            }
+            @media (min-width:769px) and (max-width:1024px)
+            {
+                margin-top: -1%;
+                width: 4%;
+            }
+            @media (min-width:1025px) and (max-width:1920px)
+            {
+                margin-top: -1%;
+                width: 2.8%;
             }
         }
     }
@@ -211,6 +277,16 @@
                 margin-top: -1.5%;
                 width: 6%;
             }
+            @media (min-width:769px) and (max-width:1024px)
+            {
+                margin-top: -1%;
+                width: 4.5%;
+            }
+            @media (min-width:1025px) and (max-width:1920px)
+            {
+                margin-top: -1%;
+                width: 3%;
+            }
         }
     }
 
@@ -227,6 +303,21 @@
             width: 25%;
             margin-left: 36%;
             padding-top: 1%;
+        }
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            width: 25%;
+            margin-left: 36%;
+            padding-top: 2%;
+            padding-bottom: 4%;
+        }
+        @media (min-width:1025px) and (max-width:1920px)
+        {
+            width: 25%;
+            margin-top: 10%;
+            margin-left: 36%;
+            padding-top: 2%;
+            padding-bottom: 3%;
         }
     }
 

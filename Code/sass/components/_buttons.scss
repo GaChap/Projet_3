@@ -1,6 +1,8 @@
+$btn__background: linear-gradient(to bottom, $couleur_secondaire, $couleur_primaire);
 .btn
 {
-    @media (max-width:1440px) 
+    
+    @media (max-width:1920px) 
     {
         padding-left: 2%;
         padding-top: 8%;
@@ -8,8 +10,18 @@
         height: 51px;
         border-radius: 25px;
         width: 115%;
-        background: linear-gradient(to bottom, $couleur_secondaire, $couleur_primaire);
+        background: $btn__background;
         color: white;
         border-color: #F6F6F6;
+        position: relative;
+        z-index: 1;
+        transition: opacity 250ms;
+        transition: box-shadow 300ms;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        &:hover
+        {
+            opacity: 0.9;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+        }
     }
 }
