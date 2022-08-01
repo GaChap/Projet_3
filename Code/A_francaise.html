@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand" rel="stylesheet">
     <title>A la française</title>
 </head>
 <body>
@@ -21,76 +22,121 @@
 
     <div class="menu">
         <div class="menu__titre">
-            <h1 class="menu__titre__text">A la française</h1><i class="fa-solid fa-heart menu__titre__icone"></i>
+            <h1 class="menu__titre__text">A la française</h1><i class="fa-regular fa-heart menu__titre__icone__anim"></i><i class="fa-solid fa-heart menu__titre__icone__anim__1"></i>
         </div>
 
         <div class="menu__entrees">
            <p class="menu__entrees__titre">ENTREES</p>
            <div class="menu__entrees__inter"></div>
-           <div class="menu__liste">
-                <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Tartare de poulpe acidulé</p>
-                    <p class="menu__liste__carte__text">Aux zests d'orange</p>
-                    <p class="menu__liste__carte__prix">25€</p>  
+           <div class="menu__liste" id="anim__entree">
+            <div class="menu__liste__carte">
+                <div class="carte__tout">
+                    <div class="carte__text">
+                        <p class="menu__liste__carte--gras">Tartare de poulpe acidulé</p>
+                        <p class="menu__liste__carte__text">Aux zests d'orange</p>
+                    </div>   
+                    <p class="menu__liste__carte__prix">25€</p>
                 </div>
+                <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
+            </div>
 
-                <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Velouté de légumes d'antan</p>
-                    <p class="menu__liste__carte__text">Carotte, panais, topinambour</p>
-                    <p class="menu__liste__carte__prix">35€</p>  
+            <div class="menu__liste__carte">
+                <div class="carte__tout">
+                    <div class="carte__text">
+                        <p class="menu__liste__carte--gras">Velouté de légumes d'antan</p>
+                        <p class="menu__liste__carte__text">Carotte, panais, topinambour</p>
+                    </div>   
+                    <p class="menu__liste__carte__prix">35€</p>
                 </div>
+                <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
+            </div>
 
-                <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Soupe à l'oignon</p>
-                    <p class="menu__liste__carte__text">Revisitée</p>
-                    <p class="menu__liste__carte__prix">20€</p>  
+            <div class="menu__liste__carte">
+                <div class="carte__tout">
+                    <div class="carte__text">
+                        <p class="menu__liste__carte--gras">Soupe à l'oignon</p>
+                        <p class="menu__liste__carte__text">Revisité</p>
+                    </div>   
+                    <p class="menu__liste__carte__prix">20€</p>
                 </div>
+                <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
+            </div>
            </div> 
         </div>
         <div class="menu__plats">
             <p class="menu__plats__titre">PLATS</p>
             <div class="menu__plats__inter"></div>
-            <div class="menu__liste">
+            <div class="menu__liste" id="anim__plat">
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Coquilles Saint-Jacques</p>
-                    <p class="menu__liste__carte__text">Accompagné d'une purée de panais</p>
-                    <p class="menu__liste__carte__prix">40€</p>  
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Coquilles Saint-Jacques</p>
+                            <p class="menu__liste__carte__text">Accompagné d'une purée de panais</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">40€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
                 </div>
 
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Magret de canard</p>
-                    <p class="menu__liste__carte__text">Et parmentier de pommes de terres</p>
-                    <p class="menu__liste__carte__prix">35€</p>  
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Magret de canard</p>
+                            <p class="menu__liste__carte__text">Et parmentier de pomme de terres</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">35€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
                 </div>
 
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Pigeonneau d'Ille-et-Vilaine</p>
-                    <p class="menu__liste__carte__text">Sur son lit de gnocchis aux légumes</p>
-                    <p class="menu__liste__carte__prix">44€</p>  
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Pigeonnau d'Ille-et-Vilaine</p>
+                            <p class="menu__liste__carte__text">Sur son lit de gnocchis aux légumes</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">44€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
                 </div>
             </div>
         </div>
         <div class="menu__desserts">
             <p class="menu__desserts__titre">DESSERTS</p>
             <div class="menu__desserts__inter"></div>
-            <div class="menu__liste">
+            <div class="menu__liste" id="anim__dessert">
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Pétales de violettes glacés</p>
-                    <p class="menu__liste__carte__text">Et purée de noisettes</p>
-                    <p class="menu__liste__carte__prix">18€</p>  
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Pétales de violettes glacés</p>
+                            <p class="menu__liste__carte__text">Et purée de noisettes</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">18€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
                 </div>
 
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Fondant au chocolat</p>
-                    <p class="menu__liste__carte__text">Revisité</p>
-                    <p class="menu__liste__carte__prix">22€</p>  
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Fondant au chocolat</p>
+                            <p class="menu__liste__carte__text">Revisité</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">22€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
                 </div>
-                <button class="menu__bouton">
+                
                 <div class="menu__liste__carte">
-                    <p class="menu__liste__carte--gras">Millefeuille croustillant</p>
-                    <p class="menu__liste__carte__text">Myrtilles et pâtes d'amande</p>
-                    <p class="menu__liste__carte__prix">23€</p>  
-                </div></button>
+                    <div class="carte__tout">
+                        <div class="carte__text">
+                            <p class="menu__liste__carte--gras">Millefeuille croustillant</p>
+                            <p class="menu__liste__carte__text">Myrtilles et pâte d'amande</p>
+                        </div>   
+                        <p class="menu__liste__carte__prix">23€</p>
+                    </div>
+                    <div class="carte--anim"><i class="fa-solid fa-circle-check"></i></div> 
+                </div>
             </div>
         </div>
 
