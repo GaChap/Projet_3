@@ -1,3 +1,89 @@
+@mixin flex__center
+{
+    display: $flex;
+    justify-content: $center;
+}
+
+@mixin flex__row
+{
+    display: $flex;
+    flex-direction: $ligne;
+}
+
+@mixin flex__row__space--b
+{
+    @include flex__row;
+    justify-content: space-between;
+}
+
+@mixin flex__row__fs
+{
+    @include flex__row;
+    justify-content: flex-start;
+}
+
+@mixin flex__column
+{
+    display: $flex;
+    flex-direction: column;
+}
+
+@mixin flex__column__space--b
+{
+    @include flex__column;
+    justify-content: space-between;
+}
+
+@mixin flex__column__fs
+{
+    @include flex__column;
+    justify-content: flex-start;
+}
+
+@mixin flex__column__rel
+{
+    @include flex__column;
+    position: $relative;
+}
+
+/*Mixin de index*/
+
+@mixin fonction__icone__ml($breakpoints)
+{
+    
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            margin-left: get-fonction-icone-ml(map-get($breakpoint, max-width));
+        }
+    }
+}
+
+@mixin section__height($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            height: get-section-height(map-get($breakpoint, max-width));
+        }
+    }
+}
+
+@mixin loader-circles-ml($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            margin-left: get-loader-circles-ml(map-get($breakpoint, max-width));
+        }
+    }
+}
+
+/*Mixin de menu*/
+
 @mixin menu__titres
 {
     margin-top: 15%;
@@ -21,7 +107,8 @@
 
 @mixin menu__cartes
 {
-    background-color: white;
+    @include flex__row__space--b;
+    background-color: $blanc;
     border-radius: 15px;
     margin-top: 5%;
     padding-left: 3%;
@@ -97,23 +184,143 @@
     }
 }
 
-@mixin menu__cartes__prix
+@mixin menu__cartes__prix($breakpoints)
 {
     width: 10%;
-    position: relative;
+    position: $relative;
     margin-bottom: 0%;
-    left: 85%;
-    bottom: 10px;
+    left: 60%;
+    bottom: 5px;
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            left: get-prix-left(map-get($breakpoint, max-width));
+        }
+    }
+    @media (min-width:769px) and (max-width:1920px)
+    {        
+        left: 30%;
+    }
 }
 
 @mixin menu__liste 
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex__column;
+    align-items: $center;
     justify-content: space-between;
     @media (min-width:426px) and (max-width:1024px)
     {
         height: 287px;
     }  
 }
+
+@mixin header__lien-top($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            height: get-header__lien-top(map-get($breakpoint, max-width));
+        }
+    }
+    @media (min-width: 426px)
+    {
+        font-size: 45px;
+    }
+    @media (min-width: 1025px) and (max-width: 1920px)
+    {
+        top: 5.5%
+    }
+}
+
+@mixin rest-img-height($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            height: get-rest-img-height(map-get($breakpoint, max-width));
+        }
+    }
+}
+
+@mixin menu-height($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            height: get-menu-height(map-get($breakpoint, max-width));
+        }
+    }
+    @media (min-width:1025px) and (max-width:1579px)
+    {
+        height: 1780px;
+    }
+    @media (min-width:1580px) and (max-width:1660px)
+    {
+        height: 2160px;
+    }
+    @media (min-width:1661px) and (max-width:1775px)
+    {
+        height: 2235px;
+    }
+    @media (min-width:1776px) and (max-width:1865px)
+    {
+        height: 2300px;
+    }
+    @media (min-width:1866px)
+    {
+        height: 2360px;
+    }
+    @content;
+}
+
+@mixin menu-enchante-height($breakpoints)
+{
+    @each $platform, $breakpoint in $breakpoints
+    {
+        @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
+        {
+            height: get-menu-enchante-height(map-get($breakpoint, max-width));
+        }
+    }
+    @media (min-width:769px) and (max-width:1023px)
+    {
+        height: 2070px;
+    }
+}
+
+@mixin coeur_anim
+{
+    @media (max-width:614px)
+    {
+        left: 9%;
+    }
+    @media (min-width:615px) and (max-width:1024px)
+    {
+        left: 13%;
+    }
+    @media (min-width:1025px) and (max-width:1765px)
+    {
+        left: 75%;
+    }
+}
+
+@mixin coeur_anim_1
+{
+    @media (max-width:614px)
+    {
+        left: -3.5%;
+    }
+    @media (min-width:615px) and (max-width:1024px)
+    {
+        left: -15%;
+    }
+    @media (min-width:1025px) and (max-width:1765px)
+    {
+        left: 61.8%;
+    }
+}
+

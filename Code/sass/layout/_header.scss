@@ -1,7 +1,6 @@
 .header
 {
-    display: flex;
-    justify-content: center;
+    @include flex__center;
     padding-bottom: 4%;
     margin-bottom: 1%;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.18);

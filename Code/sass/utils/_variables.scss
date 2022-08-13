@@ -1,4 +1,51 @@
+/*Variables de couleurs*/
+
 $couleur_primaire: #9356DC;
 $couleur_secondaire: #FF79DA;
 $couleur_tertiaire: #99E2D0;
 $btn__background: linear-gradient(to bottom, $couleur_secondaire, $couleur_primaire);
+$gris--clair: #EAEAEA;
+$gris: #F6F6F6;
+$gris--fonce: #353535;
+$blanc: white;
+
+/*Variables de structure*/
+
+$center : center;
+$gras: bold;
+$ligne : row;
+$relative: relative;
+$absolute: absolute;
+$wrap: wrap;
+$rien: none;
+$flex: flex;
+$space--a: space-around;
+$loading-borders: 3px solid transparent;
+$loading-comp: spin linear infinite;
+$menu_comp: menu 1s linear both;
+
+$breakpoints:
+(
+    mobile-s: (
+        min-width: 1px,
+        max-width: 320px,),
+    mobile: (
+        min-width: 321px,
+        max-width: 375px,),
+    mobile-l:(
+        min-width: 376px,
+        max-width: 425px,),
+    tablet: (
+        min-width: 426px,
+        max-width: 768px,),
+    laptop: (
+        min-width: 769px,
+        max-width: 1024px,),
+    laptop-l: (
+        min-width: 1025px,
+        max-width: 1440px,),
+    desktop: (
+        min-width: 1441px,
+        max-width: 1920px,)
+
+);
