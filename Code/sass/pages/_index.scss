@@ -53,6 +53,10 @@
         padding-top: 1%;
         padding-bottom: 2%;
         width: 20%;
+        @media (max-width:425px)
+        {
+            width: 55%;
+        }
     }
 }
 
