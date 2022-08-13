@@ -815,24 +815,39 @@ li::before {
   font-size: 40px;
   transition: opacity 250ms;
 }
-@media (max-width: 614px) {
+@media (min-width: 1px) and (max-width: 320px) {
   .menu__titre__icone__anim__1 {
     left: -3.5%;
   }
 }
-@media (min-width: 615px) and (max-width: 1024px) {
+@media (min-width: 321px) and (max-width: 375px) {
   .menu__titre__icone__anim__1 {
-    left: -15%;
+    left: -7.5%;
   }
 }
-@media (min-width: 1025px) and (max-width: 1765px) {
+@media (min-width: 376px) and (max-width: 425px) {
   .menu__titre__icone__anim__1 {
-    left: 61.8%;
+    left: -11%;
   }
 }
-@media (min-width: 1766px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .menu__titre__icone__anim__1 {
-    left: 53.6%;
+    left: -19.3%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu__titre__icone__anim__1 {
+    left: -15.5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu__titre__icone__anim__1 {
+    left: 51.8%;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu__titre__icone__anim__1 {
+    left: 57.6%;
   }
 }
 .menu__titre__icone__anim__1:hover {

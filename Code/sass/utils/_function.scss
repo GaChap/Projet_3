@@ -268,3 +268,50 @@
         }
     }
 }
+
+@function get-coeur-1-left($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return -3.5%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return -7.5%;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return -11%;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return -19.3%;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                    {
+                        @return -15.5%;
+                    }
+                    @else
+                    {
+                        @if($max-width == map-get(map-get($breakpoints, laptop-l), max-width))
+                        {
+                            @return 51.8%;
+                        }
+                        @else
+                        {
+                            @return 57.6%;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
