@@ -49,8 +49,10 @@
 
     &__btn
     {
-        margin-top: 5%;
-        margin-left: -6%;
+        margin-top: 1%;
+        padding-top: 1%;
+        padding-bottom: 2%;
+        width: 20%;
     }
 }
 
@@ -86,6 +88,7 @@
             color: $gris--fonce;
             @include fonction__icone__ml($breakpoints);
         }
+        height: 40px;
         padding-top: 3%;
         padding-left: 10%;
         padding-bottom: 0%;

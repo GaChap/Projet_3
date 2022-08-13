@@ -3,16 +3,16 @@
     
     @media (max-width:1920px) 
     {
-        padding-left: 2%;
-        padding-top: 8%;
-        padding-bottom: 8%;
+        padding-left: 1%;
+        padding-top: 2%;
+        padding-bottom: 4%;
         height: 51px;
         border-radius: 25px;
-        width: 115%;
+        width: 25%;
         background: $btn__background;
         color: $blanc;
         border-color: $gris;
-        position: relative;
+        position: $relative;
         z-index: 1;
         transition: opacity 250ms;
         transition: box-shadow 300ms;

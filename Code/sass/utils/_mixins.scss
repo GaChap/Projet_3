@@ -198,6 +198,10 @@
             left: get-prix-left(map-get($breakpoint, max-width));
         }
     }
+    @media (max-width:375px)
+    {
+        left: 20%;
+    }
     @media (min-width:769px) and (max-width:1920px)
     {        
         left: 30%;
@@ -321,6 +325,10 @@
     @media (min-width:1025px) and (max-width:1765px)
     {
         left: 61.8%;
+    }
+    @media (min-width:1766px)
+    {
+        left: 53.6%;
     }
 }
 
