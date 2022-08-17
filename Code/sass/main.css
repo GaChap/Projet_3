@@ -1334,7 +1334,6 @@ li::before {
   width: 10%;
   position: relative;
   margin-bottom: 0%;
-  left: 60%;
   bottom: 5px;
 }
 
@@ -1562,17 +1561,37 @@ li::before {
 }
 
 .carte__tout:hover + .carte--anim {
-  width: 5%;
+  width: 10%;
   overflow: hidden;
+  padding-top: 0%;
   -webkit-transition: width 1s;
   transition: width 1s;
   -webkit-animation: apparition 1s linear both;
           animation: apparition 1s linear both;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 375px) {
   .carte__tout:hover + .carte--anim {
-    width: 10%;
+    padding-top: 7%;
+    width: 15%;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 6%;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 3%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 1%;
   }
 }
 
@@ -1615,6 +1634,18 @@ li::before {
   left: 35%;
   -webkit-transition: left 1s;
   transition: left 1s;
+}
+
+@media (max-width: 375px) {
+  .carte__tout:hover p {
+    left: 10%;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .carte__tout:hover p {
+    left: 15%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1920px) {

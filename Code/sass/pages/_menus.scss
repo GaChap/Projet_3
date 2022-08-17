@@ -287,11 +287,25 @@
 
         &:hover + .carte--anim
         {
-            width: 5%;
+            width: 10%;
             overflow: hidden;
-            @media (max-width:1920px)
+            padding-top: 0%;
+            @media (max-width:375px)
             {
-                width: 10%;
+                padding-top: 7%;
+                width: 15%;
+            }
+            @media (min-width: 376px) and (max-width: 425px)
+            {
+                padding-top: 6%;
+            }
+            @media (min-width:426px) and (max-width: 768px)
+            {
+                padding-top: 3%;
+            }
+            @media (min-width:1025px) and (max-width:1920px)
+            {
+                padding-top: 1%;
             }
             transition: width 1s;
             animation: apparition 1s linear both;
@@ -321,6 +335,14 @@
 
         &:hover p
         {
+            @media (max-width:375px)
+            {
+                left: 10%;
+            }
+            @media (min-width:376px) and (max-width:425px)
+            {
+                left: 15%;
+            }
             left: 35%;
             @media (min-width:769px) and (max-width:1920px)
             {
