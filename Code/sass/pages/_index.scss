@@ -322,6 +322,23 @@ li::before
     }
 }
 
+.new
+{
+    display: $flex;
+    position: $relative;
+    justify-content: $center;
+    top: 60px;
+    left: 78%;
+    height: 45px;
+    width: 20%;
+    border-radius: 4px;
+    text-align: $center;
+    font-weight: $gras;
+    background-color: #99E2D0;
+    color:  #008766;
+    @include new_restaurant; 
+}
+
 .section
 {
     background-color: $gris--clair;

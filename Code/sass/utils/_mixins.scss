@@ -82,6 +82,20 @@
     }
 }
 
+@mixin new_restaurant
+{
+    @media (max-width: 425px)
+    {
+        width :25%;
+        left: 73%;
+    }
+    @media (min-width: 426px) and (max-width: 768px)
+    {
+        width: 17%;
+        left: 81%;
+    }
+}
+
 /*Mixin de menu*/
 
 @mixin menu__titres
