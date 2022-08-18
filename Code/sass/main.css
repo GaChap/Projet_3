@@ -214,6 +214,14 @@ footer > p {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.fonction__carte:hover {
+  background-color: #F5EDFF;
+}
+
+.fonction__carte:hover > i {
+  color: #9356DC;
+}
+
 .fonction__carte__icone {
   padding-right: 8%;
   margin-top: 4%;
