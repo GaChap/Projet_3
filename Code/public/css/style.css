@@ -159,6 +159,12 @@ footer > p {
   font-weight: bold;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.fonction__carte:hover {
+  background-color: #F5EDFF;
+}
+.fonction__carte:hover > i {
+  color: #9356DC;
+}
 .fonction__carte__icone {
   padding-right: 8%;
   margin-top: 4%;
@@ -394,10 +400,12 @@ li::before {
 .restaurants__carte__info--heart {
   font-size: 25px;
 }
+.restaurants__carte__info--heart__anim {
+  display: flex;
+  position: relative;
+}
 .restaurants__carte__info--heart__anim__1 {
   opacity: 0;
-  position: relative;
-  right: 25px;
   transition: opacity 250ms;
 }
 .restaurants__carte__info--heart__anim__1:hover {
@@ -410,6 +418,33 @@ li::before {
 .restaurants__carte--lien {
   text-decoration: none;
   color: black;
+}
+
+.new {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 60px;
+  left: 78%;
+  height: 45px;
+  width: 20%;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #99E2D0;
+  color: #008766;
+}
+@media (max-width: 425px) {
+  .new {
+    width: 25%;
+    left: 73%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .new {
+    width: 17%;
+    left: 81%;
+  }
 }
 
 .section {
@@ -790,77 +825,33 @@ li::before {
   right: 10%;
   top: 35%;
 }
-.menu__titre__icone__anim {
-  opacity: 1;
+.menu__titre__icone__anim__menu {
+  display: flex;
+  position: absolute;
+  top: 1%;
+  left: 90%;
   font-size: 40px;
-  position: relative;
-  left: 575px;
-  top: 10px;
 }
-@media (max-width: 614px) {
-  .menu__titre__icone__anim {
-    left: 9%;
-  }
-}
-@media (min-width: 615px) and (max-width: 1024px) {
-  .menu__titre__icone__anim {
-    left: 13%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1765px) {
-  .menu__titre__icone__anim {
-    left: 75%;
-  }
-}
-.menu__titre__icone__anim__1 {
+.menu__titre__icone__anim__menu:hover {
   opacity: 0;
-  position: relative;
-  right: 203px;
-  top: 10px;
-  font-size: 40px;
-  transition: opacity 250ms;
 }
-@media (min-width: 1px) and (max-width: 320px) {
-  .menu__titre__icone__anim__1 {
-    left: -3.5%;
+@media (max-width: 425px) {
+  .menu__titre__icone__anim__menu {
+    left: 82%;
   }
 }
-@media (min-width: 321px) and (max-width: 375px) {
-  .menu__titre__icone__anim__1 {
-    left: -7.5%;
+@media (min-width: 1025px) {
+  .menu__titre__icone__anim__menu {
+    top: 2%;
   }
 }
-@media (min-width: 376px) and (max-width: 425px) {
-  .menu__titre__icone__anim__1 {
-    left: -11%;
-  }
+.menu__titre__icone__anim--h {
+  opacity: 0;
 }
-@media (min-width: 426px) and (max-width: 768px) {
-  .menu__titre__icone__anim__1 {
-    left: -19.3%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .menu__titre__icone__anim__1 {
-    left: -15.5%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .menu__titre__icone__anim__1 {
-    left: 51.8%;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1920px) {
-  .menu__titre__icone__anim__1 {
-    left: 57.6%;
-  }
-}
-.menu__titre__icone__anim__1:hover {
+.menu__titre__icone__anim--h:hover {
   opacity: 1;
   color: #9356DC;
-}
-.menu__titre__icone__anim:hover {
-  opacity: 0;
+  transition: opacity 200ms;
 }
 .menu__entrees__titre {
   margin-top: 15%;
@@ -1016,7 +1007,6 @@ li::before {
   width: 10%;
   position: relative;
   margin-bottom: 0%;
-  left: 60%;
   bottom: 5px;
 }
 @media (min-width: 1px) and (max-width: 320px) {
@@ -1205,22 +1195,41 @@ li::before {
   width: 94%;
 }
 .carte__tout:hover + .carte--anim {
-  width: 5%;
+  width: 10%;
   overflow: hidden;
+  padding-top: 0%;
   transition: width 1s;
   animation: apparition 1s linear both;
 }
-@media (max-width: 1920px) {
+@media (max-width: 375px) {
   .carte__tout:hover + .carte--anim {
-    width: 10%;
+    padding-top: 7%;
+    width: 15%;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 6%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 3%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .carte__tout:hover + .carte--anim {
+    padding-top: 1%;
   }
 }
 .carte__tout:hover + .carte--anim > i {
   transform: rotate(0deg);
   transition: transform 1s;
+  transition-delay: 5s;
   opacity: 1;
   right: 0px;
   transition: right 200ms;
+  animation: rotation 500ms linear both;
 }
 @media (min-width: 1000px) and (max-width: 1024px) {
   .carte__tout:hover + .carte--anim > i {
@@ -1240,6 +1249,16 @@ li::before {
 .carte__tout:hover p {
   left: 35%;
   transition: left 1s;
+}
+@media (max-width: 375px) {
+  .carte__tout:hover p {
+    left: 10%;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .carte__tout:hover p {
+    left: 15%;
+  }
 }
 @media (min-width: 769px) and (max-width: 1920px) {
   .carte__tout:hover p {
@@ -1284,7 +1303,7 @@ li::before {
   font-size: 25px;
 }
 .carte--anim > i {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
   color: white;
   opacity: 0;
   position: relative;
@@ -1312,6 +1331,14 @@ li::before {
   100% {
     transform: translateY(-10%);
     opacity: 1;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @media (max-width: 1920px) {

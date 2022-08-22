@@ -303,11 +303,13 @@ li::before
                 font-size: 25px;
                 &__anim
                 {
+                    display: $flex;
+                    position: $relative;
                     &__1
                     {
                         opacity: 0;
-                        position: $relative;
-                        right: 25px;
+                        //position: $relative;
+                        //right: 25px;
                         transition: opacity 250ms;
                         &:hover
                         {
@@ -315,7 +317,6 @@ li::before
                             color: $couleur_primaire;
                         }
                     }
-
                     &:hover
                     {
                         opacity: 0;

@@ -1,0 +1,317 @@
+@function get-fonction-icone-ml($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+    {
+        @return -12%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+        {
+            @return -35%;
+        }
+        @else
+        {
+            @if($max-width >= map-get(map-get($breakpoints, laptop-l), min-width))
+            {
+                @return -44%;
+            }
+            @else
+            {
+                @return -15%;
+            }
+        }
+    }
+}
+
+@function get-section-height($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return 2338.66px;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return 2301.42px;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return 2344.03px;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return 2915.25px;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                    {
+                        @return 2104.67px;
+                    }
+                    @else
+                    {
+                        @return 2166.32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@function get-loader-circles-ml($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return 20%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return 25%;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return 28%;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return 38%;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                    {
+                        @return 43%;
+                    }
+                    @else
+                    {
+                        @return 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@function get-rest-img-height($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+    {
+        @return 420px;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+        {
+            @return 500px;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, desktop), max-width))
+            {
+                @return 670px;
+            }
+            @else
+            {
+                @return 250px;
+            }
+        }
+    }
+}
+
+@function get-menu-height($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return 1390px;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return 1470px;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return 1560px;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return 1630px;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                    {
+                        @return 1660px;
+                    }
+                    @else
+                    {
+                        @return 1175px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@function get-menu-enchante-height($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return 1500px;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return 1560px;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return 1650px;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return 1720px;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop-l), max-width))
+                    {
+                        @return 1950px;
+                    }
+                    @else
+                    {
+                        @if($max-width == map-get(map-get($breakpoints, desktop), max-width))
+                        {
+                            @return 2170px;
+                        }
+                        @else
+                        {
+                            @return 2500px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@function get-prix-left($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+    {
+        @return 25%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+        {
+            @return 41%;
+        }
+        @else
+        {
+            @return 60%;
+        }
+    }
+}
+
+@function get-header__lien-top($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+    {
+        @return 4.5%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+        {
+            @return 5%;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+            {
+                @return 8.5%;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                {
+                    @return 4.5%;
+                }
+                @else
+                {
+                    @return 3.5%;
+                }
+            }
+        }
+    }
+}
+
+@function get-coeur-1-left($max-width)
+{
+    @if($max-width == map-get(map-get($breakpoints, mobile-s), max-width))
+    {
+        @return -3.5%;
+    }
+    @else
+    {
+        @if($max-width == map-get(map-get($breakpoints, mobile), max-width))
+        {
+            @return -7.5%;
+        }
+        @else
+        {
+            @if($max-width == map-get(map-get($breakpoints, mobile-l), max-width))
+            {
+                @return -11%;
+            }
+            @else
+            {
+                @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
+                {
+                    @return -19.3%;
+                }
+                @else
+                {
+                    @if($max-width == map-get(map-get($breakpoints, laptop), max-width))
+                    {
+                        @return -15.5%;
+                    }
+                    @else
+                    {
+                        @if($max-width == map-get(map-get($breakpoints, laptop-l), max-width))
+                        {
+                            @return 51.8%;
+                        }
+                        @else
+                        {
+                            @return 57.6%;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
