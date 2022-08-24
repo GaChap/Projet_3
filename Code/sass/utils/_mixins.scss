@@ -122,6 +122,7 @@
 @mixin menu__cartes
 {
     @include flex__row__space--b;
+    overflow: hidden;
     background-color: $blanc;
     border-radius: 15px;
     margin-top: 5%;
@@ -130,7 +131,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     @media (max-width:425px)
     {
-        height: 74px;
+        height: 65px;
     }
     @media (min-width:321px) and (max-width:375px)
     {
@@ -153,7 +154,7 @@
     @media (min-width: 769px) and (max-width:1330px)
     {
         width: 79%;
-        height: 19%;
+        height: 22%;
     }
     @media (min-width:1331px) and (max-width:1920px)
     {
@@ -163,6 +164,7 @@
 
 @mixin menu__cartes__gras
 {
+    font-size: 16px;
     font-weight: $gras;
     margin-top: 0%;
     margin-bottom: -2%;
@@ -203,7 +205,15 @@
     width: 10%;
     position: $relative;
     margin-bottom: 0%;
-    bottom: 5px;
+    bottom: -23px;
+    @media (min-width:426px) and (max-width:768px)
+    {
+        bottom: -27px;
+    }
+    @media (min-width:1025px) and (max-width:1920px)
+    {
+        bottom: -15px;
+    }
     @each $platform, $breakpoint in $breakpoints
     {
         @media (min-width: map-get($breakpoint, min-width)) and (max-width: map-get($breakpoint, max-width))
@@ -211,13 +221,21 @@
             left: get-prix-left(map-get($breakpoint, max-width));
         }
     }
-    @media (max-width:375px)
+    @media (max-width:320px)
     {
-        left: 20%;
+        left: 2%;
     }
-    @media (min-width:769px) and (max-width:1920px)
+    @media (min-width:321px) and (max-width:375px)
+    {
+        left: 15%;/*modifier les modificateurs pour le déplacement latéral*/
+    }
+    @media (min-width:769px) and (max-width:1440px)
     {        
-        left: 30%;
+        left: 37%;
+    }
+    @media (min-width:1441px)
+    {
+        left: 39%;
     }
 }
 

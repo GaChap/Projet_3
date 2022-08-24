@@ -86,9 +86,6 @@
                     {
                         opacity: 0;
                     }
-                    @media (min-width: 426px) and (max-width: 1024px)
-                    {
-                    }
                     @media (max-width: 425px)
                     {
                         left: 82%;
@@ -104,7 +101,9 @@
                     &:hover
                     {
                         opacity: 1;
-                        color: $couleur_primaire;
+                        color: transparent;
+                        background: linear-gradient(352deg, $couleur_secondaire, $couleur_primaire 100%);
+                        -webkit-background-clip: text;
                         transition: opacity 200ms;
                     }
                 }
@@ -290,20 +289,48 @@
     {
         @include flex__row__fs;
         width: 94%;
+        @media (min-width:321px) and (max-width:375px)
+        {
+            width: 96%;
+        }
+        &:hover
+        {
+            @media (max-width:320px)
+            {
+                width: 70%;
+                transition: width 1s;
+            }
+            /*@media (min-width:321px) and (max-width:375px)
+            {
+                width: 81%;
+                transition: width 1s;
+            }*/
+        }
+        &:hover  .carte__text
+        {
+            width: 78%;
+            transition: width 1s;
+        }
 
         &:hover + .carte--anim
         {
-            width: 10%;
+            width: 4rem;
             overflow: hidden;
             padding-top: 0%;
-            @media (max-width:375px)
+            @media (max-width:320px)
             {
                 padding-top: 7%;
-                width: 15%;
+                height: 70%;
+            }
+            @media (min-width:321px) and (max-width:375px)
+            {
+                padding-top: 7%;
+                height: 66%;
             }
             @media (min-width: 376px) and (max-width: 425px)
             {
                 padding-top: 6%;
+                height: 70%;
             }
             @media (min-width:426px) and (max-width: 768px)
             {
@@ -341,18 +368,29 @@
 
         &:hover p
         {
-            @media (max-width:375px)
+            @media (max-width:320px)
             {
-                left: 10%;
+                left: 4%;
+            }
+            @media (min-width:321px) and (max-width:375px)
+            {
+                left: 7%;
             }
             @media (min-width:376px) and (max-width:425px)
             {
+                left: 10%;
+            }
+            @media (min-width:426px) and (max-width:768px)
+            {
                 left: 15%;
             }
-            left: 35%;
-            @media (min-width:769px) and (max-width:1920px)
+            @media (min-width:769px) and (max-width:1440px)
             {
-                left: 20%;
+                left: 13%;
+            }
+            @media(min-width: 1441px)
+            {
+                left:15%;
             }
             transition: left 1s;
         }
@@ -361,9 +399,17 @@
     &__text
     {
         @include flex__column__fs;
-        @media (max-width:425px)
+        @media (max-width:320px)
         {
-            width: 66%;
+            width: 90%;
+        }
+        @media (min-width:321px) and (max-width:375px)
+        {
+            width: 78%;
+        }
+        @media (min-width:376px) and (max-width:425px)
+        {
+            width: 71%;
         }
         @media (min-width:426px) and (max-width:768px)
         {
@@ -384,11 +430,16 @@
     &--anim
     {
         background-color: $couleur_tertiaire;
-        width: 0%;
+        width: 0;
+        //width: 4rem;
+        //margin-right: -4rem;
         display: $flex;
         justify-content: $space--a;
         padding-top: 0.6%;
-        border-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
         font-size: 25px;
         & > i
         {

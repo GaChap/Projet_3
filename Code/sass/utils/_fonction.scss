@@ -227,7 +227,7 @@
     {
         @if($max-width == map-get(map-get($breakpoints, tablet), max-width))
         {
-            @return 41%;
+            @return 47%;
         }
         @else
         {
